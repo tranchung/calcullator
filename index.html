@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paris Cafe</title>
+
+	<link rel="stylesheet" type="text/css" href="index.css">
+	
+</head>
+<body>
+	
+	<div class= "calculator"> 
+
+
+
+
+		<div class="number">
+			<div class='scr1'><input id="scr" type="text" value=""> 
+							  <input id="scr2" type="text" value=""> 
+				<p> Casio Calculator </p> </div>
+
+
+			<input id="button7" type="button" value="7"onclick="scr.value += this.value">
+			<input id="button8" type="button" value="8"onclick="scr.value += this.value">
+			<input id="button9" type="button" value="9"onclick="scr.value += this.value">
+			<input id="button/" type="button" value="/"onclick="scr.value += this.value">
+			<input id="buttondel" type="button" value="Back"onclick="back()"><br>
+
+			<input id="button4" type="button" value="4"	onclick="scr.value += this.value">
+			<input id="button5" type="button" value="5"onclick="scr.value += this.value">
+			<input id="button6" type="button" value="6"onclick="scr.value += this.value">
+			<input id="buttonX" type="button" value="*"	onclick="scr.value += this.value">
+			<input id="buttonAC" type="button" value="AC" onclick="allclear()"><br>
+
+			<input id="button1" type="button" value="1"	onclick="scr.value += this.value">
+			<input id="button2" type="button" value="2"	onclick="scr.value += this.value">
+			<input id="button3" type="button" value="3"	onclick="scr.value += this.value">
+			<input id="button+" type="button" value="+"onclick="scr.value += this.value"><br>
+		
+
+			<input id="button0" type="button" value="0"onclick="scr.value += this.value">
+			<input id="button." type="button" value="."onclick="scr.value += this.value">
+			<input id="enter" type="button" value="enter"onclick="enter()">
+			<input id="button-" type="button" value="-"onclick="scr.value += this.value"><br>
+			
+			<input id="buttonsqrt " type="button" value="^2"onclick="Bp()">
+			<input id="buttonGT" type="button" value="!"onclick="GT()">
+			<input id="buttonC2" type="button" value="sqrt 2"onclick="C2()">
+			
+			<input id="button%" type="button" value="%"onclick="scr.value += this.value">
+			<input id="button." type="button" value="clear2"onclick="clear2()">
+
+			<div class="begal">
+			<input id="buttonegal" type="button" value="="onclick="result()"></div>
+
+		
+	</div>
+	<script> function back(){
+	var str=document.getElementById("scr").value;
+	var str2=str.substr(0,str.length-1);
+	document.getElementById("scr").value=str2;}
+	</script><script>
+	function allclear(){
+    
+	document.getElementById("scr").value=null;
+}
+
+</script>
+<script>
+	function result(){
+	var rs = document.getElementById("scr").value;
+	document.getElementById("scr").value = eval(rs);		
+ }
+</script>
+<script>
+	function GT(){
+		var rs = document.getElementById("scr").value;
+		var x= eval(rs);	
+		var cmp=1;
+		if(x>0){
+			
+  			for(var i = 1;i<=x;i++){
+  				cmp=cmp*i;
+  			document.getElementById("scr").value=cmp;}}
+  		if(x<0){
+  			for(var i = -1;i>=x;i--){
+  				cmp=cmp*i;
+  			document.getElementById("scr").value=cmp;}}
+}</script>
+
+<script>
+	
+	function C2(){
+		var rs = document.getElementById("scr").value;
+		var x= Math.sqrt(eval(rs));
+document.getElementById("scr").value=x;
+}
+</script>
+<script>
+	
+	function Bp(){
+		var rs = document.getElementById("scr").value;
+		var x= Math.pow(eval(rs),2);
+document.getElementById("scr").value=x;
+}
+</script>
+<script>
+	
+	function enter(){
+		var rs = document.getElementById("scr").value;
+		
+document.getElementById("scr2").value=rs;
+}
+</script>
+<script>
+	
+	function clear2(){
+		
+		
+       document.getElementById("scr2").value=null;
+}
+</script>
+
+
+
+
+</body>
+</html>

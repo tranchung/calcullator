@@ -1,0 +1,57 @@
+.calculator{
+
+}
+
+.number {
+	width:320px;
+	
+	background-color:#663300;
+	padding: 5px;
+	margin-right: auto;
+	position: relative;
+	box-shadow: 3px 3px gray;
+
+}
+.number input{
+	width:50px;
+	height:50px;
+	margin:5px 5px;
+	text-decoration-color:white;
+	background-color: white;
+
+}
+.scr1 {
+	    border: 5px solid ;
+    	border-style: inset;
+    	background-color: #d7d7c1;
+}
+
+#scr {
+	width: 200px;
+	float:left;
+	background-color: white;
+
+}
+#scr2 {
+	background-color: white;
+}
+
+
+#buttonegal{
+	   height: 105px;
+    width: 50px;
+    position: absolute;
+    right: 10px;
+    bottom: 69px;
+
+}
+p{
+	
+text-align: center;
+font-style: italic;
+}
+.number input:active {
+	transform:scale(0.97);
+	box-shadow: 0.3px 0.3px gray;
+	
+}
